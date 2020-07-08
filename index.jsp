@@ -13,5 +13,8 @@
 游戏规则：1.点击【生成一个随机数】按钮随机产生一个1-99的数字。2.然后输入您要猜的数字。3.点击【猜】即可，共有10次机会。
 <br />
 <br />
-
+<input type="button" id="result" name="result"
+       οnclick="GetRandomNum(1,100)" value="生成一个随机数" />
+<br />
+<br />
 </html>
