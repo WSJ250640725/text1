@@ -17,4 +17,9 @@
        οnclick="GetRandomNum(1,100)" value="生成一个随机数" />
 <br />
 <br />
+<input type="text" id="my_guess_num" name="my_guess_num" />
+<input type="button" id="guess" name="guess" οnclick="checknum()"
+       value="猜" />
+
+</body>
 </html>
