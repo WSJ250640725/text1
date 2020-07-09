@@ -28,6 +28,7 @@
 </form>
 <%
     int target = 0;
+
     if (session.getAttribute("target") == null) {
 
         target = (int) (Math.random() * 100) + 1;
