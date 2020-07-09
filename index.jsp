@@ -22,6 +22,7 @@
     <br />
     <br />
     <input type="button" id="result" name="result"
+
            οnclick="GetRandomNum(1,100)" value="生成一个随机数" />
     <input type="text" name="num">
     <input type="submit" value="猜">
