@@ -79,6 +79,16 @@
         System.err.println(e.getMessage());
     }
 %>
+<script type="text/javascript">
 
+    var message = "<%= message %>";
+
+    if (message.charAt(0) == 'C') {
+        document.getElementById("frmNumGuess").hidden = true;
+    }
+
+    document.getElementById("prompt").innerHTML = message;
+</script>
+</body>
 </html>
 
