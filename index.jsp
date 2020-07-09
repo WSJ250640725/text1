@@ -43,6 +43,43 @@
 
         count = (int) session.getAttribute("count");
     }
+     String message = "";
+    try {
+
+        int num = Integer.parseInt(request.getParameter("num"));
+
+        count++;
+
+        if (num > target) {
+
+            session.setAttribute("count", count);
+
+            if (count > 1) {
+                message = "很接近了, 但不对. Try <b>lower</b>. You have made " + count + " guesses.";
+            } else {
+                message = "很接近了, 但不对. Try <b>lower</b>. You have made " + count + " guess.";
+            }
+        } else if (num < target) {
+
+            session.setAttribute("count", count);
+
+            if (count > 1) {
+                message = "很接近了, 但不对. Try <b>higher</b>. You have made " + count + " guesses.";
+            } else {
+                message = "很接近了, 但不对. Try <b>higher</b>. You have made " + count + " guess.";
+            }
+        } else {
+
+            message = "恭喜你，猜对了. And after just " + count + " tries.<br/>" +
+                    "Care to <a href='numguess.jsp'>try again</a>?";
+
+            session.removeAttribute("target");
+            session.removeAttribute("count");
+        }
+    } catch (NumberFormatException e) {
+        System.err.println(e.getMessage());
+    }
 %>
+
 </html>
 
