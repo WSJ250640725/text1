@@ -23,6 +23,18 @@
     <input type="text" name="num">
     <input type="submit" value="猜">
 </form>
+<%
 
+    int target = 0;
+    if (session.getAttribute("target") == null) {
+
+        target = (int) (Math.random() * 100) + 1;
+
+        session.setAttribute("target", target);
+    } else {
+
+        target = (int) session.getAttribute("target");
+    }
+%>
 </html>
 
