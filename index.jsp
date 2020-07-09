@@ -24,7 +24,6 @@
     <input type="submit" value="猜">
 </form>
 <%
-
     int target = 0;
     if (session.getAttribute("target") == null) {
 
