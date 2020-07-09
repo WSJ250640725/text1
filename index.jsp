@@ -35,6 +35,14 @@
 
         target = (int) session.getAttribute("target");
     }
+    int count = 0;
+    if (session.getAttribute("count") == null) {
+
+        session.setAttribute("count", 0);
+    } else {
+
+        count = (int) session.getAttribute("count");
+    }
 %>
 </html>
 
